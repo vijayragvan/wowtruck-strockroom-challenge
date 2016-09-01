@@ -39,7 +39,7 @@ class Marklist extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => 'Roll Number',
             'English' => 'English',
             'Maths' => 'Maths',
             'Science' => 'Science',

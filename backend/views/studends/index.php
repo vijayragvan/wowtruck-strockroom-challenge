@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
+<?php if (!Yii::$app->user->isGuest) { ?>
     <p>
         <?= Html::a('Create Studends', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
@@ -31,4 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+	<?php }
+		?>
 </div>

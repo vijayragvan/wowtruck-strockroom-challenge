@@ -15,10 +15,27 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
+    
+	<?php if (Yii::$app->user->isGuest) { ?>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'English',
+            'Maths',
+            'Science',
+			'total',
+            'average',
+        ],
+    ]); ?>
+	<?php } else {
+		?>
+		<p>
         <?= Html::a('Create Marklist', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
+		  <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -28,8 +45,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'English',
             'Maths',
             'Science',
+            'total',
+            'average',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+		<?php		
+	} 
+	?>
 </div>

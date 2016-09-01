@@ -57,6 +57,8 @@ class marklistSearch extends marklist
         }
 
         // grid filtering conditions
+		$query->select('id, English, Maths, Science,  (English + Maths + Science) as total,  (English + Maths + Science)/3 as average');
+		
         $query->andFilterWhere([
             'id' => $this->id,
             'English' => $this->English,

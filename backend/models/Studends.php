@@ -39,7 +39,7 @@ class Studends extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => 'Roll Number',
             'name' => 'Name',
             'age' => 'Age',
         ];
