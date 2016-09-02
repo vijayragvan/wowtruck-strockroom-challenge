@@ -49,6 +49,17 @@ frontend
     widgets/             contains frontend widgets
 vendor/                  contains dependent 3rd-party packages
 environments/            contains environment-based overrides
+DataBase/				 contains project database dump file
 tests                    contains various tests for the advanced application
     codeception/         contains tests developed with Codeception PHP Testing Framework
 ```
+
+NOTE
+-------------------
+
+Download schema file from /DataBase directory and import to you database.
+
+Login Credencials
+
+User Name : Usha
+Password : password
